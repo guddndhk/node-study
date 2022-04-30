@@ -2,7 +2,7 @@
 // const value = require('./var');
 const {add, even} = require("./var");
 // console.log(value);
-
+console.time('hi');
 function checkOddOrEven(number) {
     if (number % 2) {
         return add;
@@ -11,4 +11,15 @@ function checkOddOrEven(number) {
     }
 }
 
+console.timeEnd('hi');
+
 module.exports = checkOddOrEven;
+
+/*
+console.Time console.timeEnd 시간로깅
+console.error 에러로깅
+console.log 평범한 로그
+console.dir : 객체로깅
+console.trace : 호출스택 로깅 함수안에서 쓴다.
+console.table
+ */
