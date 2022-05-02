@@ -13,6 +13,7 @@ function checkOddOrEven(number) {
 
 console.timeEnd('hi');
 
+//module.exports 는 보통 한가지 리턴할때 사용.
 module.exports = checkOddOrEven;
 
 /*
