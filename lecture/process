@@ -1,0 +1,12 @@
+process
+$node
+process.version 설치된 노드의 버전
+process.arch 프로세서 아키텍처 정보
+process.platform 운영체제
+process.pid 현재 프로세서의 아이디 프로세스가 여러개일때 구분가능
+process.exePath 노드의 경로
+process.uptime() 프로세서가 시작된 후 흐른시간
+process.cwd() 현재 프로세스가 실행되는 위치 자주쓰임
+process.cpuUsage() 현재 CPU 사용량
+
+process.env 시스템 환경 변수들이 들어있는 객체
