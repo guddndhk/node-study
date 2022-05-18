@@ -43,3 +43,34 @@ crypto.randomBytes(64, (err, buf) => {
         console.log('password: ' + key.toString('base64'));
     });
 });
+
+//aws kms 암호화 키를 생성및 관리 해줌 azuer 도 있지 않을까?
+/*
+암호화는 알고리즘에서 뚫리는게 아니라 사람의 실수로 인해 유출 되는경우가 많다 비밀번호가 단순하다던지.. key 관리를 못했다던지 여러 변수가 있다.
+ */
+
+/*
+Util 각종 편의 기능을 모아둔 모듈
+deprecated 와 promisify 가 자주 쓰인다.
+ */
+const util = require('util');
+const crypto2 = require('crypto2');
+
+const dontUseMe = util.deprecate((x,y) => {
+    console.log(x + y);
+},'dontUseMe 함수는 deprecated 되었으니 더 이상 사용하지 마세요');
+dontUseMe(1, 2);
+
+const randomBytesPromise = util.promisify(crypto.randomBytes);
+randomBytesPromise(64)
+    .then(buffer => {
+        console.log(buffer.toString('base64'));
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+
+
+
+
