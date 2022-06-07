@@ -1,3 +1,5 @@
+//동기 코드 서버 시작후는 사용안함 한번만 실행할때 사용.
+
 const fs = require('fs');
 
 let data = fs.readFileSync('./readme.txt');
